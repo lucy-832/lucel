@@ -1302,7 +1302,7 @@ Professional support tailored to your business needs.
   modal.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
 
-  /* ---------- TESTIMONIALS ---------- */
+  /* ---------- TESTIMONIALS ---------- 
   const TESTIMONIALS = [
     { name: 'Amara O.', country: 'United Kingdom', quote: 'Lucelle Digital took my inbox and calendar chaos and turned it into a system that just works. I finally have time back in my week.', avatar: 'https://randomuser.me/api/portraits/women/68.jpg' },
     { name: 'Daniel M.', country: 'United States', quote: 'Our social media engagement grew faster in two months than it had in the entire previous year. Communication was fast and professional throughout.', avatar: 'https://randomuser.me/api/portraits/men/32.jpg' },
@@ -1344,7 +1344,7 @@ Professional support tailored to your business needs.
   document.querySelector('.testimonial-slider').addEventListener('mouseenter', () => clearInterval(testimonialTimer));
   document.querySelector('.testimonial-slider').addEventListener('mouseleave', () => {
     testimonialTimer = setInterval(() => goToSlide(currentSlide + 1), 6000);
-  });
+  }); */
 
   /* ---------- BACK TO TOP ---------- */
   const backToTop = document.getElementById('backToTop');
