@@ -1063,7 +1063,7 @@ Professional support tailored to your business needs.
 
   /* ---------- CONFIG — CUSTOMIZE ---------- */
   const CONFIG = {
-    whatsappNumber: '254115532522', // digits only, country code first, no + or spaces
+    whatsappNumber: '+254115532522', // digits only, country code first, no + or spaces
   };
 
   /* ---------- YEAR ---------- */
@@ -1424,11 +1424,9 @@ Professional support tailored to your business needs.
     const text = encodeURIComponent(lines.join('\n'));
     const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${text}`;
 
-   showToast('Opening WhatsApp...');
-
-window.open(url, '_blank');
-
-form.reset();
+    showToast('Opening WhatsApp with your message ready to send…');
+    setTimeout(() => window.open(url, '_blank', 'noopener'), 600);
+    form.reset();
   });
 
   /* Clear field error on input */
