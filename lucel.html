@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO — CUSTOMIZE THESE ============ -->
+<title>Lucelle Digital — Virtual Assistant &amp; Social Media Manager</title>
+<meta name="description" content="Lucelle Digital helps entrepreneurs and businesses save time and grow online through expert virtual assistance, social media management, and digital support services.">
+<meta name="keywords" content="virtual assistant, social media management, administrative support, digital marketing, business support services">
+<meta name="author" content="Lucelle Digital">
+<link rel="canonical" href="https://www.lucelledigital.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lucelle Digital — Helping Businesses Work Smarter, Grow Faster.">
+<meta property="og:description" content="Expert virtual assistance, social media management, and digital business support — so you can focus on running your business.">
+<meta property="og:image" content="https://www.lucelledigital.com/assets/og-cover.jpg">
+<meta property="og:url" content="https://www.lucelledigital.com/">
+<meta property="og:site_name" content="Lucelle Digital">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lucelle Digital — Helping Businesses Work Smarter, Grow Faster.">
+<meta name="twitter:description" content="Expert virtual assistance, social media management, and digital business support.">
+<meta name="twitter:image" content="https://www.lucelledigital.com/assets/og-cover.jpg">
+
+<!-- Favicon — replace /assets/favicon.svg with final artwork -->
+<link rel="icon" type="image/png" href="images/fav.png">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Lucelle Digital",
+  "description": "Virtual assistant and digital growth agency offering social media management, administrative support, and business support services.",
+  "url": "https://www.lucelledigital.com/",
+  "telephone": "+1-000-000-0000",
+  "priceRange": "$$",
+  "areaServed": "Worldwide",
+  "sameAs": [
+    "https://www.instagram.com/lucelledigital",
+    "https://www.linkedin.com/company/lucelledigital",
+    "https://www.facebook.com/lucelledigital"
+  ]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    /* =========================================================
+   LUCELLE DIGITAL — DESIGN TOKENS
+   ========================================================= */
+:root {
+  /* Brand colors */
+  --black: #0F0F0F;
+  --orange: #FF7A00;
+  --orange-light: #FFA451;
+  --orange-dim: #FFE7D1;
+  --white: #FFFFFF;
+  --gray-light: #F5F5F5;
+  --gray-border: #E7E7E7;
+  --text: #2C2C2C;
+  --text-mute: #6B6B6B;
+
+  /* Surfaces (light mode default) */
+  --bg: var(--white);
+  --surface: var(--gray-light);
+  --surface-2: #FFFFFF;
+  --ink: var(--text);
+  --ink-mute: var(--text-mute);
+  --line: var(--gray-border);
+  --nav-bg: rgba(255,255,255,0.72);
+
+  /* Type */
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --container: 1200px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 10px rgba(15,15,15,0.06);
+  --shadow-md: 0 12px 32px rgba(15,15,15,0.08);
+  --shadow-lg: 0 24px 60px rgba(15,15,15,0.14);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="dark"] {
+  --bg: #0F0F0F;
+  --surface: #171717;
+  --surface-2: #1D1D1D;
+  --ink: #F2F2F0;
+  --ink-mute: #A6A6A3;
+  --line: #2A2A2A;
+  --nav-bg: rgba(15,15,15,0.65);
+  --shadow-sm: 0 2px 10px rgba(0,0,0,0.35);
+  --shadow-md: 0 12px 32px rgba(0,0,0,0.4);
+  --shadow-lg: 0 24px 60px rgba(0,0,0,0.5);
+}
+
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background .35s var(--ease), color .35s var(--ease);
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); margin: 0 0 .5em; line-height: 1.15; letter-spacing: -0.02em; }
+p { margin: 0 0 1em; color: var(--ink-mute); }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; }
+input, textarea, select { font-family: inherit; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0; background: var(--orange); color: #fff;
+  padding: 12px 18px; z-index: 999; border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible { outline: 2.5px solid var(--orange); outline-offset: 3px; }
+
+.eyebrow {
+  display: inline-block; font-family: var(--font-display); font-weight: 600;
+  font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 12px;
+}
+
+.section-head { max-width: 640px; margin: 0 0 56px; }
+.section-head h2 { font-size: clamp(28px, 3.6vw, 42px); }
+.section-head__sub { font-size: 17px; }
+.section-head--light h2, .section-head--light p:not(.eyebrow) { color: rgba(255,255,255,0.85); }
+.section-head--light .eyebrow { color: var(--orange-light); }
+
+/* Reveal-on-scroll */
+[data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+[data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn {
+  position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-weight: 600; font-size: 15px;
+  padding: 15px 28px; border-radius: 100px; border: 1.5px solid transparent;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), color .25s var(--ease);
+  white-space: nowrap;
+}
+.btn--sm { padding: 10px 20px; font-size: 14px; }
+.btn--block { width: 100%; justify-content: center; }
+.btn--primary { background: var(--orange); color: #fff; box-shadow: 0 8px 24px rgba(255,122,0,0.32); }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(255,122,0,0.4); }
+.btn--outline { background: transparent; border-color: var(--line); color: var(--ink); }
+.btn--outline:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
+
+.btn--ripple::after {
+  content: ""; position: absolute; border-radius: 50%; background: rgba(255,255,255,0.5);
+  width: 10px; height: 10px; transform: scale(0); opacity: 0; pointer-events: none;
+  left: var(--rx, 50%); top: var(--ry, 50%); translate: -50% -50%;
+}
+.btn--ripple.is-rippling::after { animation: ripple .6s ease-out; }
+@keyframes ripple { to { transform: scale(24); opacity: 0; } }
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.nav-wrap {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  padding: 18px 0; transition: padding .3s var(--ease), background .3s var(--ease), box-shadow .3s var(--ease);
+}
+.nav-wrap.is-scrolled {
+  padding: 10px 0; background: var(--nav-bg); backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%); box-shadow: 0 1px 0 var(--line);
+}
+.nav { max-width: var(--container); margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+.nav__logo { display: flex; align-items: center; gap: 10px; }
+.logo-mark { width: 34px; height: 34px; color: var(--ink); flex-shrink: 0; }
+.nav__logo-text { font-family: var(--font-display); font-weight: 700; font-size: 19px; color: var(--ink); }
+.nav__logo-text em { font-style: normal; color: var(--orange); }
+
+.nav__links { display: flex; align-items: center; gap: 30px; }
+.nav__links a {
+  position: relative; font-size: 14.5px; font-weight: 500; color: var(--ink-mute);
+  transition: color .2s;
+}
+.nav__links a::after {
+  content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 2px; background: var(--orange);
+  transition: width .25s var(--ease);
+}
+.nav__links a:hover { color: var(--ink); }
+.nav__links a:hover::after { width: 100%; }
+
+.nav__actions { display: flex; align-items: center; gap: 14px; }
+.theme-toggle {
+  width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--line); background: var(--surface-2);
+  color: var(--ink); display: flex; align-items: center; justify-content: center; transition: all .25s;
+}
+.theme-toggle:hover { border-color: var(--orange); color: var(--orange); }
+
+.nav__burger { display: none; flex-direction: column; gap: 5px; width: 24px; background: none; border: none; padding: 4px; }
+.nav__burger span { display: block; height: 2px; background: var(--ink); border-radius: 2px; transition: all .3s var(--ease); }
+.nav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+  padding: 140px 0 80px; overflow: hidden; background: var(--bg);
+}
+.hero__bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero__gradient {
+  position: absolute; top: -20%; right: -10%; width: 70%; height: 90%;
+  background: radial-gradient(circle at 60% 40%, rgba(255,122,0,0.16), transparent 70%);
+  filter: blur(10px);
+}
+.hero__shape { position: absolute; opacity: .5; }
+.hero__shape--1 { width: 200px; top: 12%; left: 6%; fill: rgba(255,122,0,0.08); animation: float 9s ease-in-out infinite; }
+.hero__shape--2 { width: 140px; bottom: 8%; left: 14%; fill: rgba(15,15,15,0.04); animation: float 11s ease-in-out infinite reverse; }
+[data-theme="dark"] .hero__shape--2 { fill: rgba(255,255,255,0.05); }
+.hero__lines { position: absolute; right: 0; bottom: 0; width: 50%; opacity: .8; }
+@keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-22px) rotate(6deg); } }
+.hero__particles { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.hero__inner {
+  position: relative; z-index: 1; max-width: var(--container); margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;
+}
+.hero__title { font-size: clamp(34px, 4.6vw, 58px); max-width: 620px; }
+.hero__subtitle { font-size: 18px; max-width: 520px; margin-bottom: 34px; }
+.hero__actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 30px; }
+.hero__proof { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-mute); }
+.hero__proof i { color: var(--orange); }
+.hero__proof .dot { opacity: .5; }
+
+.hero__visual { position: relative; display: flex; align-items: center; justify-content: center; }
+.hero__card--main {
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg); padding: 18px; width: 100%; max-width: 340px;
+  animation: floatCard 6s ease-in-out infinite;
+}
+.hero__illustration { width: 100%; height: auto; }
+@keyframes floatCard { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+.hero__card--float {
+  position: absolute; display: flex; align-items: center; gap: 12px;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md); padding: 12px 16px; font-size: 13px;
+}
+.hero__card--float i { color: var(--orange); font-size: 18px; }
+.hero__card--float strong { display: block; font-size: 14px; font-family: var(--font-display); }
+.hero__card--float span { color: var(--ink-mute); }
+.hero__card--float1 { top: 4%; right: -4%; animation: floatCard 7s ease-in-out infinite .5s; }
+.hero__card--float2 { bottom: 6%; left: -6%; animation: floatCard 8s ease-in-out infinite 1s; }
+.hero__img { width: 100%; height: auto; border-radius: var(--radius-lg); }
+
+.hero__scroll {
+  position: relative; z-index: 1; margin: 40px auto 0; width: 26px; height: 42px; border: 2px solid var(--line);
+  border-radius: 20px; display: flex; justify-content: center; padding-top: 8px;
+}
+.hero__scroll span { width: 4px; height: 8px; background: var(--orange); border-radius: 3px; animation: scrollDot 1.8s ease-in-out infinite; }
+@keyframes scrollDot { 0% { opacity: 1; transform: translateY(0); } 70% { opacity: 0; transform: translateY(12px); } 100% { opacity: 0; } }
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+.about { padding: 120px 0; background: var(--bg); }
+.about__grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; }
+.about__frame { position: relative; }
+.about__frame svg { width: 100%; border-radius: var(--radius-lg); }
+.about__badge {
+  position: absolute; bottom: -22px; right: -22px; background: var(--orange); color: #fff;
+  padding: 16px 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+  display: flex; flex-direction: column; font-size: 12.5px; font-weight: 500;
+}
+.about__badge strong { font-family: var(--font-display); font-size: 22px; }
+
+.about__content h2 { font-size: clamp(28px, 3.4vw, 38px); }
+.about__lead { font-size: 17px; }
+.about__points { display: grid; gap: 12px; margin: 24px 0 40px; }
+.about__points li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--ink); }
+.about__points i { color: var(--orange); margin-top: 3px; }
+.about__img { width: 100%; height: auto; border-radius: var(--radius-lg); }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-top: 32px; border-top: 1px solid var(--line); }
+.stat__num { display: block; font-family: var(--font-display); font-weight: 700; font-size: clamp(26px,3vw,34px); color: var(--ink); }
+.stat__label { font-size: 13px; color: var(--ink-mute); }
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+.services { padding: 120px 0; background: var(--surface); }
+.services__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.service-card {
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-md);
+  padding: 30px 26px; transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: transparent; }
+.service-card i {
+  width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+  border-radius: 12px; background: var(--orange-dim); color: var(--orange); font-size: 20px; margin-bottom: 18px;
+  transition: background .3s, color .3s;
+}
+[data-theme="dark"] .service-card i { background: rgba(255,122,0,0.14); }
+.service-card:hover i { background: var(--orange); color: #fff; }
+.service-card h3 { font-size: 17px; margin-bottom: 8px; }
+.service-card p { font-size: 14.5px; margin: 0; }
+
+/* =========================================================
+   WHY US
+   ========================================================= */
+.why-us { padding: 120px 0; background: var(--black); }
+.features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: var(--radius-lg); overflow: hidden; }
+.feature { background: #161616; padding: 34px 26px; transition: background .3s; }
+.feature:hover { background: #1D1D1D; }
+.feature i { color: var(--orange); font-size: 22px; margin-bottom: 14px; }
+.feature h3 { color: #fff; font-size: 16px; margin-bottom: 6px; }
+.feature p { color: rgba(255,255,255,0.55); font-size: 14px; margin: 0; }
+
+/* =========================================================
+   PORTFOLIO
+   ========================================================= */
+.portfolio { padding: 120px 0; background: var(--bg); }
+.portfolio__filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+.filter-btn {
+  padding: 9px 18px; border-radius: 100px; border: 1.5px solid var(--line); background: transparent;
+  color: var(--ink-mute); font-size: 13.5px; font-weight: 500; transition: all .25s;
+}
+.filter-btn:hover { border-color: var(--orange); color: var(--orange); }
+.filter-btn.is-active { background: var(--black); border-color: var(--black); color: #fff; }
+[data-theme="dark"] .filter-btn.is-active { background: var(--orange); border-color: var(--orange); }
+
+.portfolio__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.portfolio-card {
+  position: relative; border-radius: var(--radius-md); overflow: hidden; cursor: pointer;
+  aspect-ratio: 4/3.2; background: var(--surface); border: 1px solid var(--line);
+}
+.portfolio-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.portfolio-card:hover img { transform: scale(1.08); }
+.portfolio-card__overlay {
+  position: absolute; inset: 0; background: linear-gradient(0deg, rgba(15,15,15,0.85), transparent 60%);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; opacity: 0; transition: opacity .3s;
+}
+.portfolio-card:hover .portfolio-card__overlay { opacity: 1; }
+.portfolio-card__overlay span { color: var(--orange-light); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+.portfolio-card__overlay h3 { color: #fff; font-size: 17px; margin: 0; }
+.portfolio-card.is-hidden { display: none; }
+
+/* Modal */
+.modal { position: fixed; inset: 0; z-index: 900; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.modal[hidden] { display: none; }
+.modal__overlay { position: absolute; inset: 0; background: rgba(15,15,15,0.72); backdrop-filter: blur(4px); animation: fadeIn .25s; }
+.modal__panel {
+  position: relative; background: var(--bg); border-radius: var(--radius-lg); max-width: 720px; width: 100%;
+  max-height: 88vh; overflow-y: auto; box-shadow: var(--shadow-lg); animation: modalIn .35s var(--ease);
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.modal__close {
+  position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; border: none;
+  background: rgba(15,15,15,0.6); color: #fff; font-size: 20px; line-height: 1; z-index: 2;
+}
+.modal__img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.modal__body { padding: 28px 30px 34px; }
+.modal__tag { color: var(--orange); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; }
+.modal__body h3 { margin: 8px 0 12px; font-size: 24px; }
+.modal__meta { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+.modal__meta strong { display: block; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+.modal__meta p { font-size: 14px; margin: 0; }
+
+/* =========================================================
+   PROCESS / TIMELINE
+   ========================================================= */
+.process { padding: 120px 0; background: var(--surface); }
+.timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding-top: 20px; }
+.timeline__line { position: absolute; top: 44px; left: 12%; right: 12%; height: 2px; background: var(--line); z-index: 0; }
+.timeline__progress { display: block; height: 100%; width: 0%; background: var(--orange); transition: width 1.4s var(--ease); }
+.timeline__step { position: relative; z-index: 1; text-align: center; }
+.timeline__icon {
+  width: 64px; height: 64px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 22px; color: var(--orange);
+  box-shadow: var(--shadow-sm);
+}
+.timeline__step h3 { font-size: 17px; }
+.timeline__step p { font-size: 14px; max-width: 220px; margin: 0 auto; }
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.testimonials { padding: 120px 0; background: var(--black); overflow: hidden; }
+.testimonial-slider { max-width: 720px; margin: 0 auto; }
+.testimonial-track { display: flex; transition: transform .5s var(--ease); }
+.testimonial-slide { flex: 0 0 100%; padding: 4px; }
+.testimonial-slide__card {
+  background: #171717; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg);
+  padding: 40px; text-align: center;
+}
+.testimonial-slide__stars { color: var(--orange); margin-bottom: 18px; font-size: 15px; }
+.testimonial-slide__quote { color: #fff; font-size: 19px; font-family: var(--font-display); font-weight: 500; line-height: 1.5; margin-bottom: 24px; }
+.testimonial-slide__person { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.testimonial-slide__avatar { width: 46px; height: 46px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+.testimonial-slide__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testimonial-slide__person strong { display: block; color: #fff; font-size: 14.5px; }
+.testimonial-slide__person span { color: rgba(255,255,255,0.5); font-size: 13px; }
+
+.testimonial-nav { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 34px; }
+.testimonial-nav button {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15); background: transparent;
+  color: #fff; display: flex; align-items: center; justify-content: center; transition: all .25s;
+}
+.testimonial-nav button:hover { background: var(--orange); border-color: var(--orange); }
+.testimonial-dots { display: flex; gap: 8px; }
+.testimonial-dots button { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); border: none; padding: 0; }
+.testimonial-dots button.is-active { background: var(--orange); width: 22px; border-radius: 5px; }
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq { padding: 120px 0; background: var(--bg); }
+.faq__grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; }
+.faq__head { margin: 0; }
+.faq__head .btn { margin-top: 12px; }
+
+.accordion__item { border-bottom: 1px solid var(--line); }
+.accordion__trigger {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  background: none; border: none; padding: 22px 0; text-align: left; font-family: var(--font-display);
+  font-size: 16px; font-weight: 600; color: var(--ink);
+}
+.accordion__trigger i { color: var(--orange); transition: transform .3s var(--ease); font-size: 14px; flex-shrink: 0; }
+.accordion__trigger[aria-expanded="true"] i { transform: rotate(45deg); }
+.accordion__panel { max-height: 0; overflow: hidden; transition: max-height .35s var(--ease); }
+.accordion__panel p { padding-bottom: 22px; margin: 0; font-size: 15px; }
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact { padding: 120px 0; background: var(--surface); }
+.contact__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; }
+.contact__info h2 { font-size: clamp(26px, 3vw, 34px); }
+.contact__list { display: grid; gap: 14px; margin: 26px 0; }
+.contact__list li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--ink); }
+.contact__list i { color: var(--orange); width: 20px; }
+.contact__socials { display: flex; gap: 12px; }
+.contact__socials a {
+  width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface-2);
+  display: flex; align-items: center; justify-content: center; transition: all .25s;
+}
+.contact__socials a:hover { background: var(--orange); border-color: var(--orange); color: #fff; transform: translateY(-3px); }
+
+.contact__form { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { margin-bottom: 18px; }
+.form-field label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 7px; color: var(--ink); }
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%; padding: 13px 15px; border-radius: 10px; border: 1.5px solid var(--line);
+  background: var(--bg); color: var(--ink); font-size: 14.5px; transition: border-color .2s, box-shadow .2s;
+}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255,122,0,0.12); outline: none;
+}
+.form-field textarea { resize: vertical; min-height: 100px; }
+.form-error { display: block; font-size: 12.5px; color: #E64A19; min-height: 16px; margin-top: 4px; }
+.form-field.has-error input, .form-field.has-error select, .form-field.has-error textarea { border-color: #E64A19; }
+.form-note { font-size: 12.5px; color: var(--ink-mute); text-align: center; margin: 14px 0 0; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer { background: var(--black); color: rgba(255,255,255,0.7); padding: 80px 0 0; }
+.footer .logo-mark { color: #fff; }
+.footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer__brand p { margin-top: 14px; font-size: 14px; max-width: 240px; }
+.footer__col h4 { color: #fff; font-size: 14.5px; margin-bottom: 18px; }
+.footer__col ul { display: grid; gap: 10px; }
+.footer__col a { font-size: 14px; color: rgba(255,255,255,0.6); transition: color .2s; }
+.footer__col a:hover { color: var(--orange); }
+.footer__socials { display: flex; gap: 10px; }
+.footer__socials a {
+  width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center; transition: all .25s;
+}
+.footer__socials a:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+.footer__bottom { display: flex; align-items: center; justify-content: space-between; padding: 26px 0; font-size: 13px; }
+.footer__legal { display: flex; gap: 20px; }
+.footer__legal a:hover { color: var(--orange); }
+
+/* =========================================================
+   FLOATING ELEMENTS
+   ========================================================= */
+.whatsapp-float {
+  position: fixed; bottom: 26px; right: 26px; width: 58px; height: 58px; border-radius: 50%;
+  background: var(--orange); color: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 26px; box-shadow: 0 10px 28px rgba(255,122,0,0.4); z-index: 400; transition: transform .25s;
+}
+.whatsapp-float::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--orange);
+  animation: pulse 2.4s ease-out infinite; z-index: -1;
+}
+.whatsapp-float:hover { transform: scale(1.08); }
+@keyframes pulse { 0% { transform: scale(1); opacity: .5; } 100% { transform: scale(1.9); opacity: 0; } }
+
+.back-to-top {
+  position: fixed; bottom: 26px; right: 96px; width: 46px; height: 46px; border-radius: 50%;
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--ink); display: flex;
+  align-items: center; justify-content: center; box-shadow: var(--shadow-sm); z-index: 400;
+  opacity: 0; pointer-events: none; transform: translateY(10px); transition: all .3s var(--ease);
+}
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { color: var(--orange); border-color: var(--orange); }
+
+.toast {
+  position: fixed; top: 26px; left: 50%; translate: -50% 0; background: var(--black); color: #fff;
+  padding: 14px 26px; border-radius: 100px; font-size: 14px; font-weight: 500; z-index: 999;
+  box-shadow: var(--shadow-lg); opacity: 0; pointer-events: none; transition: all .35s var(--ease);
+  display: flex; align-items: center; gap: 10px;
+}
+.toast.is-visible { opacity: 1; top: 40px; }
+.toast i { color: var(--orange); }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1080px) {
+  .services__grid { grid-template-columns: repeat(3, 1fr); }
+  .features { grid-template-columns: repeat(2, 1fr); }
+  .portfolio__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .nav__links { position: fixed; top: 0; right: -100%; height: 100vh; width: min(320px, 80vw);
+    background: var(--bg); flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 40px; gap: 26px; box-shadow: var(--shadow-lg); transition: right .35s var(--ease); z-index: 100; }
+  .nav__links.is-open { right: 0; }
+  .nav__cta { display: none; }
+  .nav__burger { display: flex; }
+
+  .hero__inner { grid-template-columns: 1fr; text-align: center; }
+  .hero__content { order: 2; }
+  .hero__actions, .hero__proof { justify-content: center; }
+  .hero__visual { order: 1; margin-bottom: 20px; }
+  .hero__subtitle { margin-left: auto; margin-right: auto; }
+
+  .about__grid, .faq__grid, .contact__grid { grid-template-columns: 1fr; }
+  .about__media { max-width: 320px; margin: 0 auto; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .features { grid-template-columns: 1fr 1fr; }
+  .timeline { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .timeline__line { display: none; }
+  .portfolio__grid { grid-template-columns: 1fr 1fr; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 620px) {
+  .hero { padding-top: 120px; }
+  .services__grid, .features, .timeline, .portfolio__grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .back-to-top { right: 20px; bottom: 96px; }
+  .whatsapp-float { right: 20px; bottom: 20px; }
+  .hero__card--float { display: none; }
+  .modal__meta { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Skip link for accessibility -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav" aria-label="Primary">
+    <a href="#home" class="nav__logo" aria-label="Lucelle Digital home">
+      <svg viewBox="0 0 44 44" class="logo-mark" aria-hidden="true">
+        <path d="M12 8 L12 36 L24 36 C31 36 35 31 35 24 C35 19.5 32.5 16.3 28.8 15" stroke="currentColor" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+        <path d="M20 15 A11 11 0 1 1 20 33" stroke="var(--orange)" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="nav__logo-text">Lucelle<em>Digital</em></span>
+    </a>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#why-us">Why Choose Us</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <a href="#contact" class="btn btn--sm btn--primary nav__cta">Hire Me</a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__gradient"></div>
+    <svg class="hero__shape hero__shape--1" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100"/></svg>
+    <svg class="hero__shape hero__shape--2" viewBox="0 0 200 200"><rect x="0" y="0" width="200" height="200" rx="40"/></svg>
+    <svg class="hero__lines" viewBox="0 0 400 400" fill="none">
+      <path d="M0 320 C 100 260, 300 380, 400 300" stroke="url(#lineGrad)" stroke-width="1.5"/>
+      <path d="M0 200 C 120 140, 260 260, 400 180" stroke="url(#lineGrad)" stroke-width="1.5"/>
+      <defs>
+        <linearGradient id="lineGrad" x1="0" y1="0" x2="400" y2="0">
+          <stop offset="0" stop-color="#FF7A00" stop-opacity="0"/>
+          <stop offset="0.5" stop-color="#FF7A00" stop-opacity="0.6"/>
+          <stop offset="1" stop-color="#FF7A00" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <canvas id="particles" class="hero__particles"></canvas>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__content" data-reveal>
+      <p class="eyebrow">Virtual Assistance &amp; Social Media Management</p>
+      <h1 class="hero__title">Your Trusted Virtual Assistant &amp; Social Media Manager</h1>
+      <p class="hero__subtitle">Helping entrepreneurs reclaim their time, organize their business, create engaging content, and build a stronger online presence through reliable virtual assistance and strategic social media management</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary btn--ripple">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://wa.me/+254115532522" target="_blank" rel="noopener" class="btn btn--outline btn--ripple"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+      <div class="hero__proof">
+        <span><i class="fa-solid fa-star"></i> 5.0 average rating</span>
+        <span class="dot">•</span>
+        <span>120+ clients served worldwide</span>
+      </div>
+    </div>
+
+    <div class="hero__visual" data-reveal>
+      <div class="hero__card hero__card--main">
+        <img class="hero__img" src="images/luce.jpg" alt="Lucelle Digital">
+        <!--svg viewBox="0 0 240 300" class="hero__illustration" aria-hidden="true">
+          <rect x="10" y="10" width="220" height="150" rx="14" fill="#1A1A1A"/>
+          <rect x="24" y="26" width="90" height="8" rx="4" fill="#FF7A00"/>
+          <rect x="24" y="44" width="150" height="6" rx="3" fill="#3A3A3A"/>
+          <rect x="24" y="58" width="120" height="6" rx="3" fill="#3A3A3A"/>
+          <rect x="24" y="80" width="60" height="46" rx="8" fill="#FF7A00" opacity="0.9"/>
+          <rect x="92" y="80" width="60" height="46" rx="8" fill="#2C2C2C"/>
+          <rect x="160" y="80" width="46" height="46" rx="8" fill="#2C2C2C"/>
+          <circle cx="120" cy="200" r="46" fill="#FF7A00" opacity="0.12"/>
+          <circle cx="120" cy="200" r="30" fill="#FF7A00"/>
+          <path d="M108 200 l8 8 18-18" stroke="#0F0F0F" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="30" y="252" width="180" height="10" rx="5" fill="#F5F5F5" stroke="#E5E5E5"/>
+          <rect x="30" y="270" width="120" height="10" rx="5" fill="#F5F5F5" stroke="#E5E5E5"/>
+        </svg-->
+      </div>
+      <div class="hero__card hero__card--float hero__card--float1">
+        <i class="fa-solid fa-check-double"></i>
+        <div><strong>Task delivered</strong><span>On time, every time</span></div>
+      </div>
+      <div class="hero__card hero__card--float hero__card--float2">
+        <i class="fa-brands fa-instagram"></i>
+        <div><strong>+38%</strong><span>Engagement growth</span></div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll to content"><span></span></a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container about__grid">
+    <div class="about__media" data-reveal>
+      <div class="about__frame">
+        <img src="images/LUCEL.jpg" alt="Lucelle Digital" class="about__img">
+        <!--svg viewBox="0 0 260 320" aria-hidden="true">
+          <rect width="260" height="320" rx="20" fill="#F5F5F5"/>
+          <circle cx="130" cy="110" r="52" fill="#0F0F0F"/>
+          <path d="M70 250 Q130 180 190 250 L190 300 Q130 320 70 300 Z" fill="#0F0F0F"/>
+          <circle cx="130" cy="110" r="52" fill="none" stroke="#FF7A00" stroke-width="4" stroke-dasharray="6 10"/>
+        </svg-->
+        <span class="about__badge"><strong>5+</strong>Years Experience</span>
+      </div>
+    </div>
+    <div class="about__content" data-reveal>
+      <p class="eyebrow">About Lucelle Digital</p>
+      <h2>Helping businesses stay organized, productive, and focused on what matters most.</h2>
+      <p class="about__lead">Lucelle Digital is a professional digital agency built on one idea: your time is your most valuable asset. We handle the operational, administrative, and digital-growth work so you can focus on what only you can do.</p>
+      <ul class="about__points">
+        <li><i class="fa-solid fa-circle-check"></i> Clear, proactive communication — you're never left wondering</li>
+        <li><i class="fa-solid fa-circle-check"></i> Meticulous attention to detail on every task</li>
+        <li><i class="fa-solid fa-circle-check"></i> Fast turnaround without cutting corners</li>
+        <li><i class="fa-solid fa-circle-check"></i> Data handled securely and confidentially</li>
+      </ul>
+
+      <!--div class="stats" id="stats">
+        <div class="stat"><span class="stat__num" data-count="250">0</span><span class="stat__label">Projects Completed</span></div>
+        <div class="stat"><span class="stat__num" data-count="120">0</span><span class="stat__label">Happy Clients</span></div>
+        <div class="stat"><span class="stat__num" data-count="5">0</span><span class="stat__label">Years Experience</span></div>
+        <div class="stat"><span class="stat__num" data-count="1800">0</span><span class="stat__label">Tasks Managed</span></div>
+      </div -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">What I Offer</p>
+      <h2>Services built around your business needs</h2>
+      <p class="section-head__sub">From daily admin to full digital growth support — pick what you need, scale when you're ready.</p>
+    </div>
+
+    <div class="services__grid" id="servicesGrid" data-reveal>
+      <!-- Cards injected via data attributes below; edit text directly -->
+      <article class="service-card"><i class="fa-solid fa-user-tie"></i><h3>Virtual Assistant</h3><p>Day-to-day support so nothing on your to-do list slips through the cracks.</p></article>
+      <article class="service-card"><i class="fa-brands fa-square-instagram"></i><h3>Social Media Management</h3><p>Content, scheduling, and engagement that keeps your brand visible and active.</p></article>
+      <article class="service-card"><i class="fa-solid fa-folder-open"></i><h3>Administrative Support</h3><p>Inbox, files, and workflows organized so your operations run smoothly.</p></article>
+      <article class="service-card"><i class="fa-solid fa-envelope-open-text"></i><h3>Email Management</h3><p>An inbox that's sorted, answered, and never a source of stress.</p></article>
+      <article class="service-card"><i class="fa-solid fa-calendar-days"></i><h3>Calendar Management</h3><p>Meetings booked, conflicts avoided, and your schedule kept on track.</p></article>
+      <article class="service-card"><i class="fa-solid fa-headset"></i><h3>Customer Support</h3><p>Friendly, prompt responses that keep your customers coming back.</p></article>
+      <article class="service-card"><i class="fa-solid fa-magnifying-glass"></i><h3>Internet Research</h3><p>Thorough, accurate research delivered in a format you can act on.</p></article>
+      <article class="service-card"><i class="fa-solid fa-table-cells"></i><h3>Data Entry</h3><p>Clean, accurate, and organized data — every time, without the errors.</p></article>
+      <article class="service-card"><i class="fa-solid fa-chart-line"></i><h3>Digital Marketing</h3><p>Strategy and execution across channels to grow your reach and revenue.</p></article>
+      <article class="service-card"><i class="fa-solid fa-briefcase"></i><h3>Business Support Services</h3><p>General operational support tailored to whatever your business needs next.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <div class="section-head section-head--light" data-reveal>
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>**Why Choose Us**
+Professional support tailored to your business needs.
+</h2>
+    </div>
+
+    <div class="features" data-reveal>
+      <div class="feature"><i class="fa-solid fa-bolt"></i><h3>Fast Communication</h3><p>Replies within hours, not days.</p></div>
+      <div class="feature"><i class="fa-solid fa-shield-heart"></i><h3>Reliable Support</h3><p>Consistent, dependable delivery every time.</p></div>
+      <div class="feature"><i class="fa-solid fa-tags"></i><h3>Affordable Pricing</h3><p>Transparent rates that fit your budget.</p></div>
+      <div class="feature"><i class="fa-solid fa-magnifying-glass-plus"></i><h3>Attention to Detail</h3><p>Nothing gets overlooked or rushed.</p></div>
+      <div class="feature"><i class="fa-solid fa-lock"></i><h3>Secure Data Handling</h3><p>Your information stays confidential.</p></div>
+      <div class="feature"><i class="fa-solid fa-award"></i><h3>Professional Work</h3><p>Polished output you can put your name on.</p></div>
+      <div class="feature"><i class="fa-solid fa-gauge-high"></i><h3>Quick Delivery</h3><p>Deadlines met without sacrificing quality.</p></div>
+      <div class="feature"><i class="fa-solid fa-clock-rotate-left"></i><h3>Flexible Scheduling</h3><p>Support that adapts to your time zone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Recent Work</p>
+      <h2>A look at what we  do</h2>
+    </div>
+
+    <div class="portfolio__filters" id="portfolioFilters" data-reveal>
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Social Media">Social Media</button>
+      <button class="filter-btn" data-filter="Branding">Branding</button>
+      <button class="filter-btn" data-filter="Virtual Assistance">Virtual Assistance</button>
+      <button class="filter-btn" data-filter="Digital Marketing">Digital Marketing</button>
+      <button class="filter-btn" data-filter="Content Management">Content Management</button>
+      <button class="filter-btn" data-filter="Website Projects">Website Projects</button>
+    </div>
+
+    <div class="portfolio__grid" id="portfolioGrid" data-reveal>
+      <!-- Populated by js/script.js from the PORTFOLIO array — edit items there -->
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio modal -->
+<div class="modal" id="portfolioModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal__overlay" data-close-modal></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close-modal aria-label="Close">&times;</button>
+    <img class="modal__img" id="modalImg" src="" alt="">
+    <div class="modal__body">
+      <span class="modal__tag" id="modalTag"></span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal__meta">
+        <div><strong>Tools Used</strong><p id="modalTools"></p></div>
+        <div><strong>Results</strong><p id="modalResults"></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">How It Works</p>
+      <h2>From first message to delivered work</h2>
+    </div>
+
+    <div class="timeline" data-reveal>
+      <div class="timeline__line"><span class="timeline__progress" id="timelineProgress"></span></div>
+      <div class="timeline__step">
+        <span class="timeline__icon"><i class="fa-solid fa-comments"></i></span>
+        <h3>Contact</h3><p>Reach out and tell us what you need help with.</p>
+      </div>
+      <div class="timeline__step">
+        <span class="timeline__icon"><i class="fa-solid fa-clipboard-list"></i></span>
+        <h3>Planning</h3><p>We map out scope, tools, and timeline together.</p>
+      </div>
+      <div class="timeline__step">
+        <span class="timeline__icon"><i class="fa-solid fa-gears"></i></span>
+        <h3>Execution</h3><p>Work gets done with regular updates along the way.</p>
+      </div>
+      <div class="timeline__step">
+        <span class="timeline__icon"><i class="fa-solid fa-box-open"></i></span>
+        <h3>Delivery</h3><p>You receive polished, ready-to-use results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ >
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head section-head--light" data-reveal>
+      <p class="eyebrow">Client Love</p>
+      <h2>What clients say after working with us</h2>
+    </div>
+
+    <div class="testimonial-slider" data-reveal>
+      <div class="testimonial-track" id="testimonialTrack">
+        < Slides populated by js/script.js from TESTIMONIALS array >
+      </div>
+      <div class="testimonial-nav">
+        <button id="testPrev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+        <button id="testNext" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section -->
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container faq__grid">
+    <div class="section-head faq__head" data-reveal>
+      <p class="eyebrow">Questions</p>
+      <h2>Frequently asked questions</h2>
+      <p class="section-head__sub">Can't find what you're looking for? Send a message and we'll get right back to you.</p>
+      <a href="#contact" class="btn btn--outline">Ask a question</a>
+    </div>
+
+    <div class="accordion" id="accordion" data-reveal>
+      <div class="accordion__item">
+        <button class="accordion__trigger" aria-expanded="false">How do I hire you?<i class="fa-solid fa-plus"></i></button>
+        <div class="accordion__panel"><p>Fill out the contact form or message directly on WhatsApp. We'll confirm scope and get started right away.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__trigger" aria-expanded="false">How quickly do you respond?<i class="fa-solid fa-plus"></i></button>
+        <div class="accordion__panel"><p>Typically within a few hours during business days, often much sooner.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__trigger" aria-expanded="false">What industries do you support?<i class="fa-solid fa-plus"></i></button>
+        <div class="accordion__panel"><p>Startups, coaches, e-commerce brands, and small-to-medium businesses across most industries.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__trigger" aria-expanded="false">Do you work remotely?<i class="fa-solid fa-plus"></i></button>
+        <div class="accordion__panel"><p>Yes — all work is handled remotely, with communication over email, WhatsApp, or your preferred tool.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__trigger" aria-expanded="false">What payment methods do you accept?<i class="fa-solid fa-plus"></i></button>
+        <div class="accordion__panel"><p>Bank transfer, PayPal, and major payment platforms — details are confirmed before work begins.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container contact__grid">
+    <div class="contact__info" data-reveal>
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Let's get you back to running your business.</h2>
+      <p>Tell us a bit about what you need — we'll reply fast, usually the same day.</p>
+      <ul class="contact__list">
+        <li><i class="fa-solid fa-envelope"></i> hello@lucelledigital.com</li>
+        <li><i class="fa-brands fa-whatsapp"></i> +1 (000) 000-0000</li>
+        <li><i class="fa-solid fa-location-dot"></i> Remote — worldwide</li>
+      </ul>
+      <div class="contact__socials">
+        <a href="https://www.linkedin.com/in/lucynjerikamau/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/19CWmeybf9/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <form class="contact__form" id="contactForm" data-reveal novalidate>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fName">Name *</label>
+          <input type="text" id="fName" name="name" required>
+          <span class="form-error" id="err-fName"></span>
+        </div>
+        <div class="form-field">
+          <label for="fEmail">Email *</label>
+          <input type="email" id="fEmail" name="email" required>
+          <span class="form-error" id="err-fEmail"></span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fPhone">Phone</label>
+          <input type="tel" id="fPhone" name="phone">
+        </div>
+        <div class="form-field">
+          <label for="fBusiness">Business</label>
+          <input type="text" id="fBusiness" name="business">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="fService">Service Needed *</label>
+        <select id="fService" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option>Virtual Assistant</option>
+          <option>Social Media Management</option>
+          <option>Administrative Support</option>
+          <option>Email &amp; Calendar Management</option>
+          <option>Customer Support</option>
+          <option>Data Entry</option>
+          <option>Internet Research</option>
+          <option>Canva Graphic Design</option>
+          <option>Website / WordPress Support</option>
+          <option>AI Automation Assistance</option>
+          <option>Lead Generation</option>
+          <option>Digital Marketing</option>
+          <option>Other</option>
+        </select>
+        <span class="form-error" id="err-fService"></span>
+      </div>
+      <div class="form-field">
+        <label for="fMessage">Message *</label>
+        <textarea id="fMessage" name="message" rows="4" required place></textarea>
+        <span class="form-error" id="err-fMessage"></span>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block btn--ripple">
+        <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+      </button>
+      <p class="form-note">Sending opens WhatsApp with your message pre-filled — nothing is stored on our server.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#home" class="nav__logo">
+        <svg viewBox="0 0 44 44" class="logo-mark" aria-hidden="true">
+          <path d="M12 8 L12 36 L24 36 C31 36 35 31 35 24 C35 19.5 32.5 16.3 28.8 15" stroke="currentColor" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+          <path d="M20 15 A11 11 0 1 1 20 33" stroke="var(--orange)" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav__logo-text">Lucelle<em>Digital</em></span>
+      </a>
+      <p>Helping Businesses Work Smarter, Grow Faster.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Virtual Assistant</a></li>
+        <li><a href="#services">Social Media Management</a></li>
+        <li><a href="#services">Digital Marketing</a></li>
+        <li><a href="#services">Content Management</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <div class="footer__socials">
+        <a href="https://www.facebook.com/share/19CWmeybf9/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year"></span> Lucelle Digital. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/+254115532522?text=Hi%20Lucelle%20Digital!%20I%27d%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>/* =========================================================
+   LUCELLE DIGITAL — SITE SCRIPT
+   ========================================================= */
+(() => {
+  'use strict';
+
+  /* ---------- CONFIG — CUSTOMIZE ---------- */
+  const CONFIG = {
+    whatsappNumber: '254115532522', // digits only, country code first, no + or spaces
+  };
+
+  /* ---------- YEAR ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- STICKY NAV ---------- */
+  const navWrap = document.getElementById('navWrap');
+  const onScroll = () => navWrap.classList.toggle('is-scrolled', window.scrollY > 40);
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- MOBILE MENU ---------- */
+  const burger = document.getElementById('navBurger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+  }));
+
+  /* ---------- DARK MODE ---------- */
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const applyTheme = (theme) => {
+    root.setAttribute('data-theme', theme);
+    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+    themeToggle.innerHTML = theme === 'dark'
+      ? '<i class="fa-solid fa-sun" aria-hidden="true"></i>'
+      : '<i class="fa-solid fa-moon" aria-hidden="true"></i>';
+    localStorage.setItem('lucelle-theme', theme);
+  };
+  const savedTheme = localStorage.getItem('lucelle-theme')
+    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  applyTheme(savedTheme);
+  themeToggle.addEventListener('click', () => {
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  /* ---------- SCROLL REVEAL ---------- */
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  /* ---------- COUNTER ANIMATION ---------- */
+  const statsEl = document.getElementById('stats');
+  let statsAnimated = false;
+  const animateCounters = () => {
+    if (statsAnimated) return;
+    statsAnimated = true;
+    document.querySelectorAll('.stat__num').forEach(el => {
+      const target = parseInt(el.dataset.count, 10);
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target).toLocaleString();
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  };
+  if (statsEl) {
+    new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) { animateCounters(); obs.disconnect(); }
+    }, { threshold: 0.4 }).observe(statsEl);
+  }
+
+  /* ---------- TIMELINE PROGRESS ---------- */
+  const timeline = document.querySelector('.timeline');
+  const timelineProgress = document.getElementById('timelineProgress');
+  if (timeline) {
+    new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) {
+        timelineProgress.style.width = '100%';
+        obs.disconnect();
+      }
+    }, { threshold: 0.4 }).observe(timeline);
+  }
+
+  /* ---------- HERO PARTICLES (subtle) ---------- */
+  const canvas = document.getElementById('particles');
+  if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    const initParticles = () => {
+      const count = Math.min(36, Math.floor(canvas.width / 40));
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.6 + 0.6,
+        vx: (Math.random() - 0.5) * 0.15,
+        vy: (Math.random() - 0.5) * 0.15,
+        o: Math.random() * 0.4 + 0.15,
+      }));
+    };
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,122,0,${p.o})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    };
+    resize(); initParticles(); draw();
+    window.addEventListener('resize', () => { resize(); initParticles(); });
+  }
+
+  /* ---------- BUTTON RIPPLE ---------- */
+  document.querySelectorAll('.btn--ripple').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const rect = btn.getBoundingClientRect();
+      btn.style.setProperty('--rx', `${e.clientX - rect.left}px`);
+      btn.style.setProperty('--ry', `${e.clientY - rect.top}px`);
+      btn.classList.remove('is-rippling');
+      void btn.offsetWidth;
+      btn.classList.add('is-rippling');
+    });
+  });
+
+  /* ---------- ACCORDION (FAQ) ---------- */
+  document.querySelectorAll('.accordion__trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const panel = trigger.nextElementSibling;
+      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+      document.querySelectorAll('.accordion__trigger').forEach(t => {
+        t.setAttribute('aria-expanded', 'false');
+        t.nextElementSibling.style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        trigger.setAttribute('aria-expanded', 'true');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---------- PORTFOLIO DATA ---------- */
+  const PORTFOLIO = [
+    {
+      title: 'Freelance Social Media Management', category: 'Social Media Management',
+      img: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1200&auto=format&fit=crop',
+      desc: 'A full content calendar and visual refresh for a boutique skincare brand, focused on consistent posting and community engagement.',
+      tools: 'Canva, Meta Business Suite, Later', results: '+38% engagement, +1,200 followers in 90 days',
+    },
+    {
+      title: 'Freelance Branding', category: 'Branding',
+      img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop',
+      desc: 'Logo, color system, and templates built for a business coach launching a new personal brand.',
+      tools: 'Canva, Adobe Express', results: 'Cohesive brand identity delivered in 5 business days',
+    },
+    {
+      title: 'Executive Inbox & Calendar Overhaul', category: 'Virtual Assistance',
+      img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop',
+      desc: 'Ongoing inbox triage and calendar management for a startup founder juggling investor and client meetings.',
+      tools: 'Gmail, Google Calendar, Notion', results: 'Inbox-zero maintained daily, 6+ hours saved weekly',
+    },
+    {
+      title: 'Performance Marketing', category: 'Digital Marketing',
+      img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+      desc: 'Multi-channel launch campaign covering email, social, and paid ads for a sustainable homeware brand.',
+      tools: 'Meta Ads, Mailchimp, Canva', results: '3.2x return on ad spend in launch month',
+    },
+    {
+      title: 'Content Coordination', category: 'Content Management',
+      img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+      desc: 'Plan, organize, and publish engaging content that keeps your brand active, consistent, and connected with your audience.',
+      tools: 'Buffer, Google Docs, Hootsuite', results: 'Zero data loss, 40% faster reporting',
+    },
+  ];
+
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  PORTFOLIO.forEach((item, i) => {
+    const card = document.createElement('article');
+    card.className = 'portfolio-card';
+    card.dataset.category = item.category;
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', `View project: ${item.title}`);
+    card.innerHTML = `
+      <img src="${item.img}" alt="${item.title}" loading="lazy">
+      <div class="portfolio-card__overlay"><span>${item.category}</span><h3>${item.title}</h3></div>
+    `;
+    card.addEventListener('click', () => openModal(i));
+    card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openModal(i); });
+    portfolioGrid.appendChild(card);
+  });
+
+  /* Filters */
+  document.getElementById('portfolioFilters').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      card.classList.toggle('is-hidden', filter !== 'all' && card.dataset.category !== filter);
+    });
+  });
+
+  /* Modal */
+  const modal = document.getElementById('portfolioModal');
+  const openModal = (index) => {
+    const item = PORTFOLIO[index];
+    document.getElementById('modalImg').src = item.img;
+    document.getElementById('modalImg').alt = item.title;
+    document.getElementById('modalTag').textContent = item.category;
+    document.getElementById('modalTitle').textContent = item.title;
+    document.getElementById('modalDesc').textContent = item.desc;
+    document.getElementById('modalTools').textContent = item.tools;
+    document.getElementById('modalResults').textContent = item.results;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  };
+  const closeModal = () => { modal.hidden = true; document.body.style.overflow = ''; };
+  modal.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+  /* ---------- TESTIMONIALS ---------- 
+  const TESTIMONIALS = [
+    { name: 'Amara O.', country: 'United Kingdom', quote: 'Lucelle Digital took my inbox and calendar chaos and turned it into a system that just works. I finally have time back in my week.', avatar: 'https://randomuser.me/api/portraits/women/68.jpg' },
+    { name: 'Daniel M.', country: 'United States', quote: 'Our social media engagement grew faster in two months than it had in the entire previous year. Communication was fast and professional throughout.', avatar: 'https://randomuser.me/api/portraits/men/32.jpg' },
+    { name: 'Priya K.', country: 'Canada', quote: 'Detail-oriented, reliable, and genuinely invested in getting things right. It felt like adding a real team member, not hiring a freelancer.', avatar: 'https://randomuser.me/api/portraits/women/45.jpg' },
+    { name: 'Julien B.', country: 'France', quote: 'From lead generation to admin support, everything was handled with care. Turnaround times were consistently faster than expected.', avatar: 'https://randomuser.me/api/portraits/men/76.jpg' },
+  ];
+
+  const track = document.getElementById('testimonialTrack');
+  const dotsWrap = document.getElementById('testimonialDots');
+  TESTIMONIALS.forEach((t, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'testimonial-slide';
+    slide.innerHTML = `
+      <div class="testimonial-slide__card">
+        <div class="testimonial-slide__stars">${'<i class="fa-solid fa-star"></i>'.repeat(5)}</div>
+        <p class="testimonial-slide__quote">&ldquo;${t.quote}&rdquo;</p>
+        <div class="testimonial-slide__person">
+          <span class="testimonial-slide__avatar"><img src="${t.avatar}" alt="${t.name}" loading="lazy"></span>
+          <div><strong>${t.name}</strong><span>${t.country}</span></div>
+        </div>
+      </div>`;
+    track.appendChild(slide);
+    const dot = document.createElement('button');
+    dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+    if (i === 0) dot.classList.add('is-active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  let currentSlide = 0;
+  const goToSlide = (i) => {
+    currentSlide = (i + TESTIMONIALS.length) % TESTIMONIALS.length;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dotsWrap.querySelectorAll('button').forEach((d, idx) => d.classList.toggle('is-active', idx === currentSlide));
+  };
+  document.getElementById('testPrev').addEventListener('click', () => goToSlide(currentSlide - 1));
+  document.getElementById('testNext').addEventListener('click', () => goToSlide(currentSlide + 1));
+  let testimonialTimer = setInterval(() => goToSlide(currentSlide + 1), 6000);
+  document.querySelector('.testimonial-slider').addEventListener('mouseenter', () => clearInterval(testimonialTimer));
+  document.querySelector('.testimonial-slider').addEventListener('mouseleave', () => {
+    testimonialTimer = setInterval(() => goToSlide(currentSlide + 1), 6000);
+  }); */
+
+  /* ---------- BACK TO TOP ---------- */
+  const backToTop = document.getElementById('backToTop');
+  document.addEventListener('scroll', () => backToTop.classList.toggle('is-visible', window.scrollY > 600), { passive: true });
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ---------- TOAST ---------- */
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  const showToast = (message, icon = 'fa-circle-check') => {
+    toast.innerHTML = `<i class="fa-solid ${icon}"></i> ${message}`;
+    toast.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 3800);
+  };
+
+  /* ---------- CONTACT FORM -> WHATSAPP ---------- */
+  const form = document.getElementById('contactForm');
+  const fields = ['fName', 'fEmail', 'fService', 'fMessage'];
+
+  const setError = (id, msg) => {
+    const field = document.getElementById(id).closest('.form-field');
+    document.getElementById(`err-${id}`) ? document.getElementById(`err-${id}`).textContent = msg : null;
+    field.classList.toggle('has-error', Boolean(msg));
+  };
+
+  const validate = () => {
+    let valid = true;
+    const name = document.getElementById('fName').value.trim();
+    const email = document.getElementById('fEmail').value.trim();
+    const service = document.getElementById('fService').value;
+    const message = document.getElementById('fMessage').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    setError('fName', name ? '' : 'Please enter your name.');
+    if (!name) valid = false;
+
+    if (!email) { setError('fEmail', 'Please enter your email.'); valid = false; }
+    else if (!emailRegex.test(email)) { setError('fEmail', 'Enter a valid email address.'); valid = false; }
+    else setError('fEmail', '');
+
+    setError('fService', service ? '' : 'Please select a service.');
+    if (!service) valid = false;
+
+    setError('fMessage', message ? '' : 'Please add a short message.');
+    if (!message) valid = false;
+
+    return valid;
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!validate()) {
+      showToast('Please fix the highlighted fields.', 'fa-triangle-exclamation');
+      return;
+    }
+
+    const data = {
+      name: document.getElementById('fName').value.trim(),
+      email: document.getElementById('fEmail').value.trim(),
+      phone: document.getElementById('fPhone').value.trim(),
+      business: document.getElementById('fBusiness').value.trim(),
+      service: document.getElementById('fService').value,
+      message: document.getElementById('fMessage').value.trim(),
+    };
+
+    const lines = [
+      'New inquiry from the Lucelle Digital website:',
+      '',
+      `Name: ${data.name}`,
+      `Email: ${data.email}`,
+    ];
+    if (data.phone) lines.push(`Phone: ${data.phone}`);
+    if (data.business) lines.push(`Business: ${data.business}`);
+    lines.push(`Service: ${data.service}`, '', `Message: ${data.message}`);
+
+    const text = encodeURIComponent(lines.join('\n'));
+    const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${text}`;
+
+    showToast('Opening WhatsApp with your message ready to send…');
+    setTimeout(() => window.open(url, '_blank', 'noopener'), 600);
+    form.reset();
+  });
+
+  /* Clear field error on input */
+  fields.forEach(id => {
+    document.getElementById(id).addEventListener('input', () => setError(id, ''));
+  });
+
+})();
+</script>
+</body>
+</html>

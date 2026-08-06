@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO ============
+     Title + description are overwritten dynamically by blog-single.js
+     once the post loads, using its `seo.title` / `seo.metaDescription`
+     fields. The defaults below are just a sane fallback. -->
+<title>Article — Lucelle Digital Blog</title>
+<meta name="description" content="An article from the Lucelle Digital blog.">
+<meta name="author" content="Lucelle Digital">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/fav.png">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Shared design system + blog styles -->
+<link rel="stylesheet" href="siteshared.css">
+<link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav__logo" aria-label="Lucelle Digital home">
+      <svg viewBox="0 0 44 44" class="logo-mark" aria-hidden="true">
+        <path d="M12 8 L12 36 L24 36 C31 36 35 31 35 24 C35 19.5 32.5 16.3 28.8 15" stroke="currentColor" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+        <path d="M20 15 A11 11 0 1 1 20 33" stroke="var(--orange)" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="nav__logo-text">Lucelle<em>Digital</em></span>
+    </a>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="index.html#why-us">Why Choose Us</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="blog.html" class="is-active">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <a href="index.html#contact" class="btn btn--sm btn--primary nav__cta">Hire Me</a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ NOT FOUND (shown only if the slug doesn't resolve) ============ -->
+  <section id="articleNotFound" hidden style="padding:180px 24px 120px;text-align:center;">
+    <p class="eyebrow">404</p>
+    <h1 style="margin-bottom:16px;">We couldn't find that article</h1>
+    <p style="max-width:420px;margin:0 auto 30px;">It may have been unpublished, moved, or the link is out of date.</p>
+    <a href="blog.html" class="btn btn--primary btn--ripple">Back to Blog <i class="fa-solid fa-arrow-right"></i></a>
+  </section>
+
+  <div id="articleMain">
+    <!-- ============ BREADCRUMB ============ -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol id="breadcrumbList"><!-- Rendered by blog-single.js --></ol>
+      </div>
+    </nav>
+
+    <!-- ============ ARTICLE HEADER ============ -->
+    <section class="article-header">
+      <div class="container article-header__inner" data-reveal>
+        <a href="#" class="category-pill" id="articleCategory">Category</a>
+        <h1 class="article-header__title" id="articleTitle">Loading article…</h1>
+
+        <div class="article-header__meta">
+          <div class="article-header__author">
+            <img id="articleAuthorImg" src="" alt="" loading="lazy">
+            <div>
+              <strong id="articleAuthorName"></strong>
+              <span id="articleAuthorRole"></span>
+            </div>
+          </div>
+          <div class="article-header__stats">
+            <span id="articleDate"></span>
+            <span class="dot">&bull;</span>
+            <span id="articleReadingTime"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED IMAGE ============ -->
+    <div class="article-hero-img" id="articleHeroImgWrap" data-reveal>
+      <img id="articleHeroImg" src="" alt="" width="980" height="560">
+    </div>
+
+    <!-- ============ ARTICLE BODY + SHARE + ASIDE ============ -->
+    <div class="article-layout">
+      <aside class="article-share" id="articleShare" aria-label="Share this article">
+        <!-- Rendered by blog-single.js -->
+      </aside>
+
+      <article class="article-body" id="articleBody">
+        <!-- Rich content injected by blog-single.js from BlogAPI.getPostBySlug() -->
+      </article>
+
+      <aside class="article-aside"></aside>
+    </div>
+
+    <div class="container" style="max-width:760px; margin-bottom: 0;">
+      <div class="article-tags" id="articleTags"></div>
+      <div class="article-author-box" id="articleAuthorBox"></div>
+    </div>
+
+    <div style="height:60px;"></div>
+
+    <!-- ============ PREV / NEXT NAVIGATION ============ -->
+    <nav class="article-nav" aria-label="Article navigation">
+      <a href="#" class="article-nav__link article-nav__link--prev" id="articleNavPrev">
+        <span class="article-nav__label"><i class="fa-solid fa-arrow-left"></i> Previous</span>
+        <span class="article-nav__title"></span>
+      </a>
+      <a href="#" class="article-nav__link article-nav__link--next" id="articleNavNext">
+        <span class="article-nav__label">Next <i class="fa-solid fa-arrow-right"></i></span>
+        <span class="article-nav__title"></span>
+      </a>
+    </nav>
+
+    <!-- ============ RELATED POSTS ============ -->
+    <section class="related-posts" id="relatedPostsSection">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Keep Reading</p>
+          <h2>Related articles</h2>
+        </div>
+        <div class="blog-grid" id="relatedPostsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter">
+      <div class="newsletter__glow" aria-hidden="true"></div>
+      <div class="container newsletter__inner" data-reveal>
+        <p class="eyebrow">Stay in the loop</p>
+        <h2>Get new articles in your inbox</h2>
+        <p>One email whenever there's something worth reading. No spam, unsubscribe anytime.</p>
+        <form class="newsletter__form" id="newsletterForm">
+          <input type="email" placeholder="you@business.com" required aria-label="Email address">
+          <button type="submit" class="btn btn--primary btn--ripple">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <p class="newsletter__note">By subscribing you agree to receive emails from Lucelle Digital.</p>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html#home" class="nav__logo">
+        <svg viewBox="0 0 44 44" class="logo-mark" aria-hidden="true">
+          <path d="M12 8 L12 36 L24 36 C31 36 35 31 35 24 C35 19.5 32.5 16.3 28.8 15" stroke="currentColor" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+          <path d="M20 15 A11 11 0 1 1 20 33" stroke="var(--orange)" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav__logo-text">Lucelle<em>Digital</em></span>
+      </a>
+      <p>Helping Businesses Work Smarter, Grow Faster.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html#services">Virtual Assistant</a></li>
+        <li><a href="index.html#services">Social Media Management</a></li>
+        <li><a href="index.html#services">Digital Marketing</a></li>
+        <li><a href="index.html#services">Content Management</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <div class="footer__socials">
+        <a href="https://www.facebook.com/share/19CWmeybf9/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year"></span> Lucelle Digital. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/+254115532522?text=Hi%20Lucelle%20Digital!%20I%27d%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="blog.js"></script>
+<script src="blog-render.js"></script>
+<script src="siteshared.js"></script>
+<script src="newsletter.js"></script>
+<script src="blog-single.js"></script>
+</body>
+</html>

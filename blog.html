@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO ============ -->
+<title>Blog — Lucelle Digital | Virtual Assistant &amp; Social Media Insights</title>
+<meta name="description" content="Practical tips on virtual assistance, social media management, productivity, and running a smoother business — from the Lucelle Digital blog.">
+<meta name="keywords" content="virtual assistant blog, social media management tips, productivity, small business support">
+<meta name="author" content="Lucelle Digital">
+<link rel="canonical" href="https://www.lucelledigital.com/blog.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Lucelle Digital">
+<meta property="og:description" content="Practical tips on virtual assistance, social media management, and running a smoother business.">
+<meta property="og:image" content="https://www.lucelledigital.com/assets/og-cover.jpg">
+<meta property="og:url" content="https://www.lucelledigital.com/blog.html">
+<meta property="og:site_name" content="Lucelle Digital">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Lucelle Digital">
+<meta name="twitter:description" content="Practical tips on virtual assistance, social media management, and running a smoother business.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/fav.png">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Shared design system + blog styles -->
+<link rel="stylesheet" href="siteshared.css">
+<link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav__logo" aria-label="Lucelle Digital home">
+      <svg viewBox="0 0 44 44" class="logo-mark" aria-hidden="true">
+        <path d="M12 8 L12 36 L24 36 C31 36 35 31 35 24 C35 19.5 32.5 16.3 28.8 15" stroke="currentColor" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+        <path d="M20 15 A11 11 0 1 1 20 33" stroke="var(--orange)" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="nav__logo-text">Lucelle<em>Digital</em></span>
+    </a>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="lucel.html#home">Home</a></li>
+      <li><a href="lucel.html#services">Services</a></li>
+      <li><a href="lucel.html#portfolio">Portfolio</a></li>
+      <li><a href="lucel.html#why-us">Why Choose Us</a></li>
+      <li><a href="lucel.html#faq">FAQ</a></li>
+      <li><a href="lucel.html#blog" class="is-active">Blog</a></li>
+      <li><a href="lucel.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <a href="index.html#contact" class="btn btn--sm btn--primary nav__cta">Hire Me</a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ BLOG HERO ============ -->
+  <section class="blog-hero">
+    <div class="blog-hero__gradient" aria-hidden="true"></div>
+    <div class="container blog-hero__inner" data-reveal>
+      <p class="eyebrow">The Lucelle Digital Blog</p>
+      <h1 class="blog-hero__title">Insights for running a smoother, smarter business</h1>
+      <p class="blog-hero__subtitle">Practical advice on virtual assistance, social media, productivity, and digital growth — written from real client work, not theory.</p>
+
+      <form class="blog-search" id="blogSearchForm" role="search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <label for="blogSearchInput" class="sr-only" style="position:absolute;left:-9999px;">Search articles</label>
+        <input type="search" id="blogSearchInput" placeholder="Search articles…" autocomplete="off">
+        <button type="submit" aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+
+      <!-- Category filters — generated from live post data, never hardcoded -->
+      <div class="blog-filters" id="categoryFilters" aria-label="Filter by category"></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ARTICLE ============ -->
+  <section class="featured-post">
+    <div class="container">
+      <div id="featuredPostSlot"><!-- Rendered by blog-listing.js from BlogAPI.getFeaturedPost() --></div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG GRID ============ -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="section-head" data-reveal style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;max-width:none;">
+        <div>
+          <p class="eyebrow">Latest Articles</p>
+          <h2 style="margin-bottom:0;">Fresh from the blog</h2>
+        </div>
+        <p id="resultsNote" style="margin:0;font-size:13.5px;"></p>
+      </div>
+
+      <!-- Cards are generated entirely by blog-listing.js from BlogAPI.getPosts().
+           Nothing here is hardcoded — new posts published from the future Admin
+           Dashboard will appear here automatically. -->
+      <div class="blog-grid" id="blogGrid" aria-live="polite"></div>
+
+      <nav class="pagination" id="pagination" aria-label="Blog pagination"></nav>
+    </div>
+  </section>
+
+  <!-- ============ TAGS ============ -->
+  <section class="tags-section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Browse by Topic</p>
+        <h2>Popular tags</h2>
+      </div>
+      <div class="tags-cloud" id="tagsCloud" data-reveal aria-label="Filter by tag"></div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter">
+    <div class="newsletter__glow" aria-hidden="true"></div>
+    <div class="container newsletter__inner" data-reveal>
+      <p class="eyebrow">Stay in the loop</p>
+      <h2>Get new articles in your inbox</h2>
+      <p>One email whenever there's something worth reading. No spam, unsubscribe anytime.</p>
+      <form class="newsletter__form" id="newsletterForm">
+        <input type="email" placeholder="you@business.com" required aria-label="Email address">
+        <button type="submit" class="btn btn--primary btn--ripple">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p class="newsletter__note">By subscribing you agree to receive emails from Lucelle Digital.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html#home" class="nav__logo">
+        <svg viewBox="0 0 44 44" class="logo-mark" aria-hidden="true">
+          <path d="M12 8 L12 36 L24 36 C31 36 35 31 35 24 C35 19.5 32.5 16.3 28.8 15" stroke="currentColor" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+          <path d="M20 15 A11 11 0 1 1 20 33" stroke="var(--orange)" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav__logo-text">Lucelle<em>Digital</em></span>
+      </a>
+      <p>Helping Businesses Work Smarter, Grow Faster.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html#services">Virtual Assistant</a></li>
+        <li><a href="index.html#services">Social Media Management</a></li>
+        <li><a href="index.html#services">Digital Marketing</a></li>
+        <li><a href="index.html#services">Content Management</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <div class="footer__socials">
+        <a href="https://www.facebook.com/share/19CWmeybf9/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year"></span> Lucelle Digital. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/+254115532522?text=Hi%20Lucelle%20Digital!%20I%27d%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Data layer first, then render helpers, then shared site behavior, then page logic -->
+<script src="blog.js"></script>
+<script src="blog-render.js"></script>
+<script src="siteshared.js"></script>
+<script src="newsletter.js"></script>
+<script src="bloglisting.js"></script>
+</body>
+</html>
